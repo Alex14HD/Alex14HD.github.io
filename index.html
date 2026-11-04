@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex Hernández · Defensa y aeronáutica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&family=Merriweather:wght@700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050b1a;--panel:#080e24;--line:#1b2a4a;--ink:#e8ecf8;--muted:#8693b5;--ice:#8fd3ff;--chip:#3aa7ff;--teal:#b7c97a;
+--s:'Merriweather',Georgia,serif;--b:'Exo 2',system-ui,sans-serif;--o:'Orbitron','Exo 2',system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:400 17px/1.7 var(--b);background-color:var(--bg);
+background-image:radial-gradient(1px 1px at 20px 30px,#fff9,transparent),radial-gradient(1px 1px at 120px 90px,#fff6,transparent),radial-gradient(1.5px 1.5px at 210px 160px,#fffb,transparent);
+background-size:250px 200px,310px 260px,430px 340px;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--ice)}
+:focus-visible{outline:3px solid var(--ice);outline-offset:3px}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 36px;padding:16px 32px;border-bottom:1px solid var(--line);background:#050b1acc}
+header strong{font:700 1.1rem var(--s);color:var(--ice);letter-spacing:.03em}
+header nav{display:flex;flex-wrap:wrap;gap:6px 32px;flex:1;justify-content:center}
+header nav a{color:var(--muted);text-decoration:none;font-weight:500}
+header nav a[aria-current=page],header nav a:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang button{font:700 .85rem var(--b);background:transparent;color:var(--muted);border:0;border-radius:999px;padding:4px 12px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ice);color:#04101f}
+.layout{display:grid;grid-template-columns:230px 1fr;max-width:1240px;margin:0 auto}
+aside{position:sticky;top:0;align-self:start;padding:28px 20px;border-right:1px solid var(--line);height:100vh}
+aside h2{font:500 .8rem var(--o);letter-spacing:.2em;margin:0 0 14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+aside a{display:block;color:var(--muted);text-decoration:none;padding:8px 6px}
+aside a:hover{color:var(--ice)}
+main{padding:0 40px 40px;min-width:0}
+.hero{padding:72px 0 8px}
+.spec{font:500 .8rem var(--o);letter-spacing:.18em;text-transform:uppercase;color:var(--ice);margin:0 0 10px}
+h1{font:700 clamp(2.2rem,5.5vw,3.6rem)/1.1 var(--s);color:var(--ice);margin:0 0 24px}
+.lead{max-width:60ch;color:var(--muted);margin:0 0 24px}
+.links a{margin-right:22px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--chip);padding-bottom:2px}
+.art{margin:36px 0 0;width:100%;height:auto;display:block}
+.sil path,.sil rect,.sil circle{fill:#0e1b30;stroke:#6f95c9;stroke-width:1.2}
+.sil line,.sil polyline{fill:none;stroke:#6f95c9;stroke-width:1.2}
+.cap{list-style:none;display:flex;flex-wrap:wrap;gap:6px 22px;padding:0;margin:10px 0 0;font:500 .7rem var(--o);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+section{padding-top:56px;scroll-margin-top:12px}
+h2.t{display:flex;align-items:center;gap:16px;font:700 1.5rem var(--s);color:var(--ice);margin:0 0 28px}
+h2.t:after{content:"";flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{font:700 1.1rem var(--b);margin:14px 0 8px}
+.card p{color:var(--muted);margin:0 0 14px;font-size:1rem}
+.pill{display:inline-flex;gap:8px;align-items:center;font:500 .75rem var(--o);letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:#1b2410;border:1px solid #3f5220;border-radius:999px;padding:5px 14px}
+.pill:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.8rem;color:var(--chip);border:1px solid #17407a;border-radius:999px;padding:2px 12px}
+.tl{position:relative;display:grid;grid-template-columns:1fr 1fr;column-gap:56px;row-gap:28px;padding:20px 0}
+.tl:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(var(--ice),var(--line))}
+.tl:after{content:"";position:absolute;left:50%;top:-10px;border:8px solid transparent;border-bottom:12px solid var(--ice);border-top:0;transform:translateX(-50%)}
+.it{position:relative}
+.it:nth-child(odd){grid-column:1}
+.it:nth-child(even){grid-column:2;margin-top:64px}
+.it:before{content:"";position:absolute;top:24px;width:18px;height:18px;border-radius:50%;background:#bfeaff;border:3px solid var(--bg);box-shadow:0 0 0 2px #1b5a8a}
+.it:nth-child(odd):before{right:-37px}
+.it:nth-child(even):before{left:-37px}
+.when{font:500 .8rem var(--o);letter-spacing:.12em;color:var(--teal)}
+.it h3{margin:6px 0 8px}
+form{max-width:520px}
+label{display:block;font-weight:500}
+input,textarea{width:100%;margin:6px 0 16px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:inherit}
+.send{font:700 1rem var(--b);background:var(--ice);color:#04101f;border:0;border-radius:999px;padding:10px 26px;cursor:pointer}
+footer{border-top:1px solid var(--line);padding:24px 32px;color:var(--muted);font-size:.9rem;text-align:center}
+@media(max-width:860px){
+ .layout{grid-template-columns:1fr}
+ aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:14px 20px}
+ aside h2{display:none}aside{display:flex;flex-wrap:wrap;gap:0 14px}
+ main{padding:0 20px 32px}header{padding:14px 20px}header nav{justify-content:flex-start}
+ .tl{grid-template-columns:1fr}
+ .tl:before{left:10px}.tl:after{left:11px}
+ .it:nth-child(n){grid-column:1;margin-top:0;padding-left:38px}
+ .it:nth-child(n):before{left:2px;right:auto}
+}
+</style>
+</head>
+<body>
+<header>
+  <strong>Alex Hernández</strong>
+  <nav aria-label="Sitio">
+    <a href="index.html" aria-current="page" data-en="Home">Inicio</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="mapa.html" data-en="Industry map">Mapa de industria</a>
+  </nav>
+  <div class="lang" role="group" aria-label="Idioma / Language">
+    <button type="button" data-l="es" aria-pressed="true">ES</button>
+    <button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<div class="layout">
+<aside aria-label="Menú">
+  <h2 data-en="MENU">MENÚ</h2>
+  <a href="#sobre" data-en="About me">Sobre mí</a>
+  <a href="#formacion" data-en="Education">Formación</a>
+  <a href="#proyectos" data-en="Projects">Proyectos</a>
+  <a href="#experiencia" data-en="Experience">Experiencia</a>
+  <a href="#contacto" data-en="Contact">Contacto</a>
+</aside>
+
+<main>
+<div class="hero" id="inicio">
+  <p class="spec" data-en="Defence · Aerospace · Financial control · Project management">Defensa · Aeronáutica · Control financiero · Gestión de proyectos</p>
+  <h1 data-en="Hi, I’m Alex Hernández.">Hola, soy Alex Hernández.</h1>
+  <p class="lead" data-en="[Write 2–3 sentences: who you are and what you do in the defence and aerospace sector.]">[Escribe aquí 2–3 frases: quién eres y qué haces en el sector de defensa y aeronáutica.]</p>
+  <p class="links"><a href="https://www.linkedin.com/in/tu-usuario">LinkedIn ↗</a><a href="#contacto" data-en="Contact">Contacto</a></p>
+  <svg class="art" viewBox="0 0 1200 270" role="img" aria-label="Siluetas de plataformas de defensa: fragata F-100, Leopard 2E, Pizarro, Castor, radar Lanza, Eurofighter y C295">
+  <defs>
+    <linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1a3a" stop-opacity="0"/><stop offset="1" stop-color="#16294d"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#3aa7ff" stroke-opacity=".08"/></pattern>
+  </defs>
+  <rect width="1200" height="270" fill="url(#grid)"/>
+  <rect y="200" width="1200" height="70" fill="url(#gr)"/>
+  <path d="M0 218H1200" stroke="#3aa7ff" stroke-opacity=".35" fill="none"/>
+  <g class="sil">
+    <g transform="translate(10,218)">
+      <path d="M0 -26H255L292 -42L270 0H14Z"/><path d="M70 -26V-52H190V-26Z"/><path d="M104 -52V-72H168V-52Z"/>
+      <line x1="136" y1="-72" x2="136" y2="-112"/><rect x="124" y="-96" width="24" height="10"/>
+      <path d="M222 -26V-36H246V-26Z"/><line x1="246" y1="-32" x2="268" y2="-36"/><rect x="200" y="-34" width="10" height="8"/>
+    </g>
+    <g transform="translate(335,218)">
+      <path d="M6 -18H168V-2Q168 2 162 2H12Q6 2 6 -2Z"/><path d="M14 -18L26 -32H150L166 -18Z"/>
+      <path d="M62 -32L74 -50H122L136 -42V-32Z"/><rect x="136" y="-47" width="52" height="4"/><rect x="84" y="-55" width="14" height="5"/>
+      <circle cx="28" cy="-9" r="7"/><circle cx="52" cy="-9" r="7"/><circle cx="76" cy="-9" r="7"/><circle cx="100" cy="-9" r="7"/><circle cx="124" cy="-9" r="7"/><circle cx="148" cy="-9" r="7"/>
+    </g>
+    <g transform="translate(545,218)">
+      <path d="M4 -14H146V-2Q146 2 140 2H10Q4 2 4 -2Z"/><path d="M10 -14L22 -34H108L142 -26V-14Z"/>
+      <path d="M58 -34L66 -50H98L106 -34Z"/><rect x="104" y="-46" width="36" height="3"/>
+      <circle cx="24" cy="-8" r="6"/><circle cx="48" cy="-8" r="6"/><circle cx="72" cy="-8" r="6"/><circle cx="96" cy="-8" r="6"/><circle cx="120" cy="-8" r="6"/>
+    </g>
+    <g transform="translate(715,218)">
+      <path d="M6 -18H168V-2Q168 2 162 2H12Q6 2 6 -2Z"/><path d="M14 -18L26 -32H150L166 -18Z"/><path d="M50 -32V-48H110V-32Z"/>
+      <path d="M170 -4L190 -34H196L178 2Z"/><polyline points="60,-48 92,-84 140,-70"/>
+      <circle cx="28" cy="-9" r="7"/><circle cx="52" cy="-9" r="7"/><circle cx="76" cy="-9" r="7"/><circle cx="100" cy="-9" r="7"/><circle cx="124" cy="-9" r="7"/><circle cx="148" cy="-9" r="7"/>
+    </g>
+    <g transform="translate(930,218)">
+      <rect x="0" y="-22" width="100" height="14"/><circle cx="20" cy="-8" r="7"/><circle cx="48" cy="-8" r="7"/><circle cx="80" cy="-8" r="7"/>
+      <path d="M30 -22V-62H60V-22Z"/><rect x="18" y="-142" width="56" height="80"/>
+      <line x1="46" y1="-142" x2="46" y2="-62"/><line x1="18" y1="-122" x2="74" y2="-122"/><line x1="18" y1="-102" x2="74" y2="-102"/><line x1="18" y1="-82" x2="74" y2="-82"/>
+    </g>
+    <g transform="translate(560,72) rotate(-15) scale(.9)">
+      <path d="M0 -60L6 -30L8 20L12 50H-12L-8 20L-6 -30Z"/>
+      <path d="M-8 10L-70 52V58L-10 52Z"/><path d="M8 10L70 52V58L10 52Z"/>
+      <path d="M-6 -20L-28 -6V-2L-6 -8Z"/><path d="M6 -20L28 -6V-2L6 -8Z"/>
+    </g>
+    <g transform="translate(1095,68) rotate(12) scale(.8)">
+      <path d="M0 -70Q10 -70 10 -55V55L4 72H-4L-10 55V-55Q-10 -70 0 -70Z"/><path d="M-90 -22H90V-6H-90Z"/>
+      <path d="M-42 -34H-34V2H-42Z"/><path d="M34 -34H42V2H34Z"/><path d="M-30 58H30V66H-30Z"/>
+    </g>
+  </g>
+</svg>
+<ul class="cap"><li>Fragata F-100</li><li>Leopard 2E</li><li>Pizarro</li><li>Castor</li><li>Radar Lanza</li><li>Eurofighter</li><li>C295</li></ul>
+</div>
+
+<section id="sobre"><h2 class="t" data-en="About me">Sobre mí</h2>
+  <p class="lead" data-en="[Tell your story: how you went from banking, fashion and consulting to defence and aerospace, and what you bring from outside the sector.]">[Cuenta tu historia: cómo pasaste de banca, moda y consultoría a defensa y aeronáutica, y qué aportas viniendo de fuera del sector.]</p>
+</section>
+
+<section id="formacion"><h2 class="t" data-en="My education">Mi formación</h2><div class="grid" id="edu"></div></section>
+
+<section id="proyectos"><h2 class="t" data-en="Projects">Proyectos</h2>
+  <div class="grid">
+    <article class="card"><span class="pill" data-en="In progress">En curso</span>
+      <h3><a href="mapa.html" data-en="Spanish aerospace &amp; defence industry map">Mapa de la industria aeroespacial y de defensa en España</a></h3>
+      <p data-en="[What it is, your part, sources and tools.]">[Qué es, tu parte, fuentes y herramientas.]</p>
+      <div class="chips"><span class="chip">Leaflet</span><span class="chip" data-en="Data">Datos</span></div></article>
+    <article class="card"><span class="pill" data-en="[Status]">[Estado]</span>
+      <h3 data-en="[Project name]">[Nombre del proyecto]</h3>
+      <p data-en="[Short description and your role.]">[Descripción breve y tu papel.]</p></article>
+  </div>
+</section>
+
+<section id="experiencia"><h2 class="t" data-en="My experience">Mi experiencia</h2><div class="tl" id="jobs"></div></section>
+
+<section id="newsletter"><h2 class="t">Newsletter</h2>
+  <p class="lead" data-en="[What it covers, how often and who it is for.]">[De qué trata, cada cuánto sale y a quién va dirigida.]</p>
+  <form method="post" action="https://TU-SERVICIO/suscribir">
+    <label for="nl" data-en="Your email">Tu correo</label><input id="nl" name="email" type="email" required autocomplete="email">
+    <button class="send" type="submit" data-en="Subscribe">Suscribirme</button>
+  </form>
+</section>
+
+<section id="contacto"><h2 class="t" data-en="Contact">Contacto</h2>
+  <p class="lead"><a href="mailto:tu@correo.com">tu@correo.com</a> · <a href="https://www.linkedin.com/in/tu-usuario">LinkedIn</a></p>
+  <form method="post" action="https://formspree.io/f/TU-ID">
+    <label for="n" data-en="Name">Nombre</label><input id="n" name="name" required autocomplete="name">
+    <label for="e" data-en="Email">Correo</label><input id="e" name="email" type="email" required autocomplete="email">
+    <label for="m" data-en="Message">Mensaje</label><textarea id="m" name="message" rows="4" required></textarea>
+    <button class="send" type="submit" data-en="Send">Enviar</button>
+  </form>
+</section>
+</main>
+</div>
+<footer>© Alex Hernández</footer>
+
+<script>
+// ====== EDITA SOLO ESTA PARTE ======
+const EDU=[
+ {tag:['Máster','M.Sc.'],title:['Máster en Control Financiero y Gestión de Proyectos','Master’s in Financial Control and Project Management'],desc:['[Universidad · años. Qué estudiaste y materias destacadas.]','[University · years. What you studied and key subjects.]'],chips:['[Materia]','[Materia]']},
+ {tag:['Grado','B.Sc.'],title:['Administración de Empresas','Business Administration'],desc:['[Universidad · años. Especialidad, intercambio o prácticas.]','[University · years. Specialisation, exchange or internships.]'],chips:['[Materia]','[Materia]']}];
+// Más reciente primero. Revisa el orden y rellena fechas.
+const JOBS=[
+ {org:'Indra',when:'[AAAA–AAAA]',role:['[Puesto]','[Role]'],desc:['[Qué hacías y con qué resultados.]','[What you did and the results.]'],chips:['[Herramienta]']},
+ {org:'Capgemini',when:'[AAAA–AAAA]',role:['[Puesto]','[Role]'],desc:['[Descripción.]','[Description.]'],chips:['[Herramienta]']},
+ {org:'Hawkers',when:'[AAAA–AAAA]',role:['[Puesto]','[Role]'],desc:['[Descripción.]','[Description.]'],chips:['[Herramienta]']},
+ {org:'Tendam',when:'[AAAA–AAAA]',role:['[Puesto]','[Role]'],desc:['[Descripción.]','[Description.]'],chips:['[Herramienta]']},
+ {org:'ING España',when:'[AAAA–AAAA]',role:['[Puesto]','[Role]'],desc:['[Descripción.]','[Description.]'],chips:['[Herramienta]']},
+ {org:'Airbus Defence',when:'[AAAA–AAAA]',role:['[Puesto]','[Role]'],desc:['[Descripción.]','[Description.]'],chips:['[Herramienta]']}];
+// ====================================
+const $=s=>document.querySelector(s);
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const chips=a=>`<div class="chips">${a.map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div>`;
+$('#edu').innerHTML=EDU.map(e=>`<article class="card"><span class="pill" data-en="${esc(e.tag[1])}">${esc(e.tag[0])}</span><h3 data-en="${esc(e.title[1])}">${esc(e.title[0])}</h3><p data-en="${esc(e.desc[1])}">${esc(e.desc[0])}</p>${chips(e.chips)}</article>`).join('');
+$('#jobs').innerHTML=JOBS.map(j=>`<article class="card it"><div class="when">${esc(j.when)}</div><h3>${esc(j.org)} · <span data-en="${esc(j.role[1])}">${esc(j.role[0])}</span></h3><p data-en="${esc(j.desc[1])}">${esc(j.desc[0])}</p>${chips(j.chips)}</article>`).join('');
+function setLang(l){
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-en]').forEach(e=>{if(e.dataset.es===undefined)e.dataset.es=e.innerHTML;e.innerHTML=l==='en'?e.dataset.en:e.dataset.es});
+  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
+}
+document.querySelector('.lang').onclick=e=>{const b=e.target.closest('button');if(b)setLang(b.dataset.l)};
+</script>
+</body>
+</html>
